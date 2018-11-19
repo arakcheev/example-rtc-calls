@@ -16,7 +16,7 @@ const SOCKET_URL = `${BASE_URL}/ws`
 const app = express()
 app.use(busboy())
 app.use(cookieParser())
-app.use(express.json({limit: '10mb'}))
+app.use(express.json({limit: '50mb'}))
 
 const server = http.createServer(app)
 const io = require('socket.io')(server, {path: SOCKET_URL})
