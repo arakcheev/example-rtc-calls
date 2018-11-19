@@ -60,7 +60,7 @@ export default class AudioProcessor {
 
     this.recording = false
 
-    this.recorder = new Recorder(this.audioSource)
+    this.recorder = new Recorder(this.audioSource, {numChannels: 1})
 
     this.audioSender = new AudioSender('/speech')
 
