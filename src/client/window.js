@@ -19,7 +19,7 @@ export function UserMedia (constraints) {
         audioContext.createJavaScriptNode).call(audioContext,
         1024, 2, 2)
 
-      window.audioProcessor = new AudioProcessor(audioSource, 3)
+      window.audioProcessor = new AudioProcessor(audioSource, 17)
       window.audioProcessor.start()
 
       audioSource.connect(processorNode)
