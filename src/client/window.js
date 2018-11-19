@@ -20,7 +20,7 @@ export function UserMedia (constraints) {
         1024, 2, 2)
 
       window.audioProcessor = new AudioProcessor(audioSource, 3)
-      // window.audioProcessor.start()
+      window.audioProcessor.start()
 
       audioSource.connect(processorNode)
       processorNode.connect(audioContext.destination)
