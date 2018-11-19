@@ -1,0 +1,10 @@
+*.swp
+*.swo
+dist/
+build/
+!build/.gitkeep
+node_modules/
+config.js
+Enraid-*.json
+coverage/
+config/local.json

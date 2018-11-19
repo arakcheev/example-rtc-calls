@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Enraid Call
+    include _headers
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  body.call
+    input#baseUrl(type="hidden" value=baseUrl)
+    input#callId(type="hidden" value=callId)
+    input#iceServers(type="hidden" value=JSON.stringify(iceServers))
+
+    div#container
+
+
+    script(src=baseUrl + '/static/index.js')
