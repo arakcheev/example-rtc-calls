@@ -58,7 +58,7 @@ export default class App extends React.PureComponent {
 
         <div className="row justify-content-md-center">
           {_.map(peers, (_, userId) => (
-            <div className="col">
+            <div className="col col-md-6">
               <Video
                 active={active === userId}
                 onClick={toggleActive}

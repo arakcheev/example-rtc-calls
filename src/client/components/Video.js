@@ -48,7 +48,7 @@ export default class Video extends React.PureComponent {
 
   render () {
     const {active, userId} = this.props
-    const className = classnames('video-container', 'container', {active})
+    const className = classnames('video-container', {active})
     return (
       <video
         className={className}
