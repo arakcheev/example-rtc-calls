@@ -19,7 +19,6 @@ module.exports = function (socket, io) {
   })
 
   socket.on('getUserId', payload => {
-    console.log(payload)
     io.to(payload.userId).emit('initUserId', socket.id)
   })
 
