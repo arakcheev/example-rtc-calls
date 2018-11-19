@@ -10,7 +10,6 @@ const _ = require('underscore')
 
 module.exports = function (socket, io) {
   socket.on('signal', payload => {
-    console.log('signal: %s, payload: %o', socket.id, payload)
     io.to(payload.userId)
       .emit('signal', {
         userId: socket.id,
@@ -23,14 +22,12 @@ module.exports = function (socket, io) {
   })
 
   socket.on('ready', roomName => {
-    console.log('ready: %s, room: %s', socket.id, roomName)
     if (socket.room) socket.leave(socket.room)
     socket.room = roomName
     socket.join(roomName)
     socket.room = roomName
 
     let users = getUsers(roomName)
-    console.log('ready: %s, room: %s, users: %o', socket.id, roomName, users)
     io.to(roomName).emit('users', {
       initiator: socket.id,
       users
